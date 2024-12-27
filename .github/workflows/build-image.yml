@@ -89,4 +89,5 @@ jobs:
           docker buildx build \
           --tag ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/midl-xyz/mempool:${{ matrix.service }}-$TAG \
           --output "type=registry" \
-          --build-arg commitHash=$SHORT_SHA
+          --build-arg commitHash=$SHORT_SHA \
+          ./
